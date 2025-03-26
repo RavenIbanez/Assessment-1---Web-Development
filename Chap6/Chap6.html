@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petrol Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('fuel-retail-services.cdn.en-AE.1.avif') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .petrol-station {
+            background: #e74c3c;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            width: 300px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .calculator label {
+            display: block;
+            margin-top: 10px;
+        }
+        .calculator input {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        button {
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 15px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #2ecc71;
+        }
+        p {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="petrol-station">
+        <h1>Petrol Pump</h1>
+        <div class="calculator">
+            <label for="price">Price per Liter:</label>
+            <input type="number" id="price" value="1.69" step="0.01">
+            
+            <label for="liters">Liters Purchased:</label>
+            <input type="number" id="liters" value="0" step="0.1">
+            
+            <button onclick="calculateTotal()">Calculate</button>
+            
+            <p>Total Cost: <span id="total-cost">$0.00</span></p>
+        </div>
+    </div>
+    <script>
+        function calculateTotal() {
+            let price = parseFloat(document.getElementById('price').value);
+            let liters = parseFloat(document.getElementById('liters').value);
+            let totalCost = price * liters;
+            document.getElementById('total-cost').textContent = `$${totalCost.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
