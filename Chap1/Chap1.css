@@ -1,0 +1,73 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #f5e1b9, #8b5a2b); /* Light brown to dark brown gradient */
+    color: #333;
+    line-height: 1.6;
+    margin: 20px;
+    padding: 20px;
+}
+
+/* Recipe Name Styling */
+/* Styles the main recipe title with gradient text */
+h1 {
+    background: linear-gradient(to bottom, #5a2d0c, #7a4a1f); /* Dark brown to light brown gradient */
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Description Styling */
+/* Styles the introductory paragraph */
+p {
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Section Styling */
+/* Styles sections */
+.section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Ingredients and Method Headings */
+/* Styles the main headings with gradient text */
+h2 {
+    background: linear-gradient(to bottom, #7a4a1f, #5a2d0c); /* Light brown to dark brown gradient */
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1.8em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Styles subheadings for steps with gradient text */
+h3 {
+    background: linear-gradient(to bottom, #5a2d0c, #7a4a1f); /* Dark brown to light brown gradient */
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1.5em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* List Styling */
+/* Adds spacing and formatting to ingredient and method lists */
+ul, ol {
+    margin-left: 20px;
+}
+
+ul li, ol li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+/* Nutrition Information Styling */
+/* Highlights important nutritional values */
+ul li strong {
+    color: #7a4a1f;
+}
